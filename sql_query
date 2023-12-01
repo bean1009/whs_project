@@ -1,0 +1,8 @@
+Cart.sql
+SELECT productID, quantity FROM Cart WHERE userID = ?
+SELECT quantity FROM Cart WHERE userID = ? AND productID = ?
+INSERT INTO Cart (userID, productID, quantity) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE quantity = quantity + VALUES(quantity)
+UPDATE Cart SET quantity = quantity - ? WHERE userID = ? AND productID = ?
+DELETE FROM Cart WHERE userID = ? AND productID = ?
+
+Categorites.sql
